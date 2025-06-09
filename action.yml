@@ -30,14 +30,11 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: /bin/sh
   args:
-    - -c "ls -la / && pwd && echo 'Debugging' && sleep 60"
-#  args:
-#    - ${{ inputs.run }}
-#    - ${{ inputs.test }}
-#    - ${{ inputs.dir }}
-#    - ${{ inputs.work-dir }}
-#    - ${{ inputs.port }}
-#    - ${{ inputs.origin }}
-#    - ${{ inputs.file }}
+    - ${{ inputs.run }}
+    - ${{ inputs.test }}
+    - ${{ inputs.dir }}
+    - ${{ inputs.work-dir }}
+    - ${{ inputs.port }}
+    - ${{ inputs.origin }}
+    - ${{ inputs.file }}
