@@ -30,6 +30,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  entrypoint: 'run.sh'
   args:
     - ${{ inputs.run }}
     - ${{ inputs.test }}
