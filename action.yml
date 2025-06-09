@@ -8,7 +8,7 @@ inputs:
     description: 'Shell command for starting tests'
     required: true
     default: 'npm run test'
-  work-dir:
+  work_dir:
     description: 'Path to source codes where test command would run'
     required: false
   dir:
@@ -34,7 +34,7 @@ runs:
     - ${{ inputs.run }}
     - ${{ inputs.test }}
     - ${{ inputs.dir }}
-    - ${{ inputs.work-dir }}
+    - ${{ inputs.work_dir }}
     - ${{ inputs.port }}
     - ${{ inputs.origin }}
     - ${{ inputs.file }}
