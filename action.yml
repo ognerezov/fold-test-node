@@ -1,0 +1,40 @@
+name: 'Fold test Node.js'
+description: 'Fold test server application for Node.js projects'
+inputs:
+  run:
+    description: 'Shell command for starting frontend application'
+    required: false
+  test:
+    description: 'Shell command for starting tests'
+    required: true
+    default: 'npm run test'
+  work-dir:
+    description: 'Path to source codes where test command would run'
+    required: false
+  dir:
+    description: 'Path to fold server project files'
+    required: true
+    default: '/fold'
+  port:
+    description: 'For backend. Applicable if no port set by folder structure'
+    required: false
+  origin:
+    description: 'Allowed Origins settings for backend responses. Should be specified if fe frontend runs on port other than 3000'
+    required: false
+  file:
+    description: 'Path to file for serving single file instead of folder'
+    required: false
+outputs:
+  test-log:
+    description: 'Test output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.run }}
+    - ${{ inputs.test }}
+    - ${{ inputs.dir }}
+    - ${{ inputs.work-dir }}
+    - ${{ inputs.port }}
+    - ${{ inputs.origin }}
+    - ${{ inputs.file }}
