@@ -32,7 +32,7 @@ runs:
   image: 'Dockerfile'
   entrypoint: /bin/sh
   args:
-    - c "ls -la / && pwd && echo 'Debugging' && sleep 60"
+    - -c "ls -la / && pwd && echo 'Debugging' && sleep 60"
 #  args:
 #    - ${{ inputs.run }}
 #    - ${{ inputs.test }}
