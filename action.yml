@@ -1,5 +1,8 @@
 name: 'Fold test Node.js'
 description: 'Fold test server application for Node.js projects'
+branding:
+  icon: 'folder'
+  color: 'blue'
 inputs:
   run:
     description: 'Shell command for starting frontend application'
