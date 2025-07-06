@@ -71,3 +71,9 @@ steps:
 - For private repos, ensure `actions/checkout@v4` has access.
 - Use `port` only if Fold doesn't auto-detect ports.
 - Set `origin` if your frontend runs on non-3000 ports.
+
+### Check this example repository
+https://github.com/ognerezov/fold-next-test-example
+
+### See full documentation for fold server tool
+https://github.com/ognerezov/fold
